@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content%}
+  <div class="kropp">
+    <div class="col-md-4">
+      <ul id="albumList" class="list-group"><!-- javascript adds li-->
+        {% for album in albumListe %}
+          <a href="?album={{ album.album }}" class="albumKnapp list-group-item" > {{ album.album }}  ({{ album.total }}) </a>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-8 container-fluid">
+      <div class="row bilder">
+      {% for bilde in bildeListe %}
+         '<div class="card col-md-4"> <img class="img-responsive img-thumbnail alBilde" src="{{ bilde.image.url }}" id="alBilde" alt=" {{ bilde.name }}"><p class="card-text">{{ bilde.description }}</p></div>'
+      {% endfor %}
+      </div> <!--/row-->
+    </div>
+
+  </div><!--/kropp-->
+
+  <!-- Modal for å vise bilder i full skjerm  -->
+  <div id="myModal" class="modal1">
+
+    <!-- The Close Button -->
+    <span class="closer glyphicon glyphicon-remove"></span>
+
+    <!-- Modal Content (The Image) -->
+
+    <img class="modal-content" id="img01">
+
+
+
+    <span class="glyphicon glyphicon-menu-left velger" id="venstre"></span>
+    <span class="glyphicon glyphicon-menu-right velger" id="hoyre"></span>
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption-tekst"></div>
+  </div><!--/myModal-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'js/album.js' %}" ></script>
+{% endblock content %}
