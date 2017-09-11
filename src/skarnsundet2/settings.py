@@ -25,7 +25,7 @@ SECRET_KEY = '8u!bjzl&p%9*y^pw@%d7$61$8)v@^)dtde-+=j7do5p9rj_!@*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['skarnsundet2.herokuapp.com']
 
 
 # Application definition
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'skarnsundet2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'skarnd',                      
+        'USER': 'helge',
+        'PASSWORD': '123qwe',
+        'HOST': '',
+        'PORT': '5432',
     }
 }
 
