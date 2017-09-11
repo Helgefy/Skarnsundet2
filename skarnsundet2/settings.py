@@ -25,7 +25,7 @@ SECRET_KEY = '8u!bjzl&p%9*y^pw@%d7$61$8)v@^)dtde-+=j7do5p9rj_!@*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['skarnsundet2.herokuapp.com']
+ALLOWED_HOSTS = ['skarnsundet2.herokuapp.com','localhost']
 
 
 # Application definition
@@ -84,6 +84,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+# Update database configuration with $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
