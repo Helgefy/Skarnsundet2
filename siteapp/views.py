@@ -17,6 +17,7 @@ def album(request):
 			curAlb = album['album']
 	bildeListe = bildeListe[curAlb]
 	context={
+		'title': 'Album',
 		'albumListe': albumListe,
 		'bildeListe': bildeListe,
 	}
@@ -24,6 +25,7 @@ def album(request):
 
 def forside(request):
 	context ={
+		'title': 'Main'
 
 	}
 	return render(request,'home.html')
