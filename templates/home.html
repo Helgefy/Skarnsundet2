@@ -2,6 +2,13 @@
 
 {% block content%}
   <div class="kropp">
+  {% for element in over %}
+    <div class="col-md-12">
+      <h1>{{element.title}}</h1>
+      <p>{{element.text}}</p>
+
+    </div>
+  {% endfor %}
     <div class="col-md-12">
       <h1>Indtroduksjon</h1>
       <p>Her kan det stå en liten intruduksjon til siden</p>

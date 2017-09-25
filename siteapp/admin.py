@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 
 # Register your models here.
-from .models import Bilde ,Main_site
+from .models import Bilde, Main_site
 
 class BildeAdmin(admin.ModelAdmin):
 	list_display = ['name','album']
