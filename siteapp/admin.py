@@ -22,4 +22,4 @@ class MainAdmin(admin.ModelAdmin):
 		model = Main_site
 
 admin.site.register(Bilde, BildeAdmin)
-admin.site register(Main_site, MainAdmin)
+admin.site.register(Main_site, MainAdmin)
