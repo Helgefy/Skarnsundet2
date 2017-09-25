@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db.models import Count
 from django.shortcuts import render
-from .models import Bilde
+from .models import Bilde, Main_site
 
 # Create your views here.
 
@@ -24,7 +24,11 @@ def album(request):
 	return render(request, 'album.html', context)
 
 def forside(request):
+	over = Main_site.objects.filter(position='Over').all()
+	under = Main_site.objects.filter(position='Under').all()
 	context ={
+		'over': over,
+		'under': under,
 		'title': 'Main'
 
 	}

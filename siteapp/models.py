@@ -26,7 +26,7 @@ class Main_site(models.Model):
 	height_field = models.IntegerField(default=0)
 	width_field = models.IntegerField(default=0)
 	POSITION_CHOICES = (
-		('Over','Over')
+		('Over','Over'),
 		('Under','Under')
 	)
 	position = models.CharField(max_length=6, choices=POSITION_CHOICES,default='Over')
