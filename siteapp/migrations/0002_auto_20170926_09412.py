@@ -9,7 +9,7 @@ import siteapp.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('siteapp', '0001_initial'),
+        ('siteapp', '0001_initial2'),
     ]
 
     operations = [
