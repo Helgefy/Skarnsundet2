@@ -1,0 +1,22 @@
+{% block content%}
+  <div class="kropp">
+   {% for ele in element %}
+    {% if ele.image %}
+
+    <div class="col-md-6">
+      <h1>{{ele.title}}</h1>
+      <p>{{ele.text}}</p>
+    </div>
+    <div class="col-md-6">
+      <img class="img-responsive img-thumbnail" src="{{ bele.image.url }}" alt=" {{ ele.title }}"><p class="card-text">{{ ele.image_text }}</p></div>'
+    </div>
+    {% else %}
+    <div class="col-md-12">
+      <h1>{{ele.title}}</h1>
+      <p>{{ele.text}}</p>
+    </div>
+    {% endif %}
+   {% endfor %}
+  </div><!--/kropp-->
+
+{% endblock content %}

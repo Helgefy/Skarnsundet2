@@ -3,17 +3,22 @@
 {% block content%}
   <div class="kropp">
   {% for element in over %}
+    {% if element.image %}
+
+    <div class="col-md-6">
+      <h1>{{element.title}}</h1>
+      <p>{{element.text}}</p>
+    </div>
+    <div class="col-md-6">
+      <img class="img-responsive img-thumbnail" src="{{ element.image.url }}" alt=" {{ element.title }}"><p class="card-text">{{ element.image_text }}</p></div>'
+    </div>
+    {% else %}
     <div class="col-md-12">
       <h1>{{element.title}}</h1>
       <p>{{element.text}}</p>
-
     </div>
+    {% endif %}
   {% endfor %}
-    <div class="col-md-12">
-      <h1>Indtroduksjon</h1>
-      <p>Her kan det stå en liten intruduksjon til siden</p>
-      
-    </div>
     <div class="bokser">
     <div class="col-md-6"  href="#">
       <a href="album"><div class="caption post-content forskning">
@@ -40,6 +45,23 @@
       </div></a>
     </div>
     </div><!--/bokser--> 
+    {% for element in under %}
+    {% if element.image %}
+
+    <div class="col-md-6">
+      <h1>{{element.title}}</h1>
+      <p>{{element.text}}</p>
+    </div>
+    <div class="col-md-6">
+      <img class="img-responsive img-thumbnail" src="{{ element.image.url }}" alt=" {{ element.title }}"><p class="card-text">{{ element.image_text }}</p></div>'
+    </div>
+    {% else %}
+    <div class="col-md-12">
+      <h1>{{element.title}}</h1>
+      <p>{{element.text}}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
   </div><!--/kropp-->
 
 {% endblock content %}

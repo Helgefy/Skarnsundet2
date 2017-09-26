@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 
 # Register your models here.
-from .models import Bilde, Main_site
+from .models import Bilde, Main_site, Under_vann
 
 class BildeAdmin(admin.ModelAdmin):
 	list_display = ['name','album']
@@ -20,6 +20,12 @@ class MainAdmin(admin.ModelAdmin):
 	list_filter = ['position']
 	class Meta:
 		model = Main_site
+class UnderAdmin(admin.ModelAdmin):
+	list_display= ['title']
+	list_display_links = ['title']
+	class Meta:
+		model = Under_vann
 
 admin.site.register(Bilde, BildeAdmin)
 admin.site.register(Main_site, MainAdmin)
+admin.site.register(Under_vann, UnderAdmin)

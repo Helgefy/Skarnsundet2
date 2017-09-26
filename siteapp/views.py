@@ -33,3 +33,11 @@ def forside(request):
 
 	}
 	return render(request,'home.html')
+
+def undervann(request):
+
+	context={
+		'element': element,
+		'title': 'Under vann'
+	}
+
