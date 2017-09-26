@@ -11,11 +11,10 @@
       <p>{{element.text}}</p>
     </div>
     <div class="col-md-6">
-      <img class="img-responsive img-thumbnail" src="{{ element.image.url }}" alt=" {{ element.title }}"><p class="card-text">{{ element.image_text }}</p></div>'
-    </div>
+      <img class="img-responsive img-thumbnail" src="{{ element.image.url }}" alt=" {{ element.title }}"><p class="card-text">{{ element.image_text }}</p>
+      </div>'
     {% else %}
     <div class="col-md-12">
-      <h1>{{element.title}}</h1>
       <p>{{element.text}}</p>
     </div>
     {% endif %}
@@ -53,7 +52,6 @@
     {% if element.image %}
 
     <div class="col-md-6">
-      <h1>{{element.title}}</h1>
       <p>{{element.text}}</p>
     </div>
     <div class="col-md-6">
@@ -61,7 +59,6 @@
     </div>
     {% else %}
     <div class="col-md-12">
-      <h1>{{element.title}}</h1>
       <p>{{element.text}}</p>
     </div>
     {% endif %}
