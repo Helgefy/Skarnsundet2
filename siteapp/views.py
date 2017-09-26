@@ -32,7 +32,7 @@ def forside(request):
 		'title': 'Main'
 
 	}
-	return render(request,'home.html')
+	return render(request,'home.html',context)
 
 def undervann(request):
 
