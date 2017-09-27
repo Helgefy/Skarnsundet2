@@ -2,44 +2,43 @@
 
 {% block content%}
   <div class="kropp">
-  {{over}}
   {% for element in over %}
   <div class='row'>
         <h1>{{element.title}}</h1>
     {% if element.image %}
     <div class="col-md-6">
-      <p>{{element.text}}</p>
+      <p class='home-text'>{{element.text}}</p>
     </div>
     <div class="col-md-6">
       <img class="img-responsive img-thumbnail" src="{{ element.image.url }}" alt=" {{ element.title }}"><p class="card-text">{{ element.image_text }}</p>
       </div>'
     {% else %}
     <div class="col-md-12">
-      <p>{{element.text}}</p>
+      <p class='home-text'>{{element.text}}</p>
     </div>
     {% endif %}
     </div>
   {% endfor %}
     <div class="bokser">
-    <div class="col-md-6"  href="#">
+    <div class="col-md-6 link-kort"  href="#">
       <a href="album"><div class="caption post-content forskning">
       <h1>Forskning</h1>
       <p>Forskning i Skarnsundet er veldig bra. Det er mye å forske på for store å små. Noen forsker på fisk. Andre forsker på koraller. Noen forsker til og med på fjordkultur.</p>
       </div></a>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 link-kort">
       <a href="album"><div class="caption post-content forskning">
       <h1>Forskning</h1>
       <p>Forskning i Skarnsundet er veldig bra. Det er mye å forske på for store å små. Noen forsker på fisk. Andre forsker på koraller. Noen forsker til og med på fjordkultur.</p>
       </div></a>
     </div>
-    <div class="col-md-6 ">
+    <div class="col-md-6 link-kort">
       <a href="album"><div class="caption post-content forskning">
       <h1>Forskning</h1>
       <p>Forskning i Skarnsundet er veldig bra. Det er mye å forske på for store å små. Noen forsker på fisk. Andre forsker på koraller. Noen forsker til og med på fjordkultur.</p>
       </div></a>   
     </div>
-    <div class="col-md-6 " href="album/index.html">
+    <div class="col-md-6 link-kort" href="album/index.html">
       <a href="album"><div class="caption post-content forskning">
       <h1>Album</h1>
       <p>Forskning i Skarnsundet er veldig bra. Det er mye å forske på for store å små. Noen forsker på fisk. Andre forsker på koraller. Noen forsker til og med på fjordkultur.</p>
@@ -52,14 +51,14 @@
     {% if element.image %}
 
     <div class="col-md-6">
-      <p>{{element.text}}</p>
+      <p class='home-text'>{{element.text}}</p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 ">
       <img class="img-responsive img-thumbnail" src="{{ element.image.url }}" alt=" {{ element.title }}"><p class="card-text">{{ element.image_text }}</p>
     </div>
     {% else %}
     <div class="col-md-12">
-      <p>{{element.text}}</p>
+      <p class='home-text'>{{element.text}}</p>
     </div>
     {% endif %}
     </div>
