@@ -7,14 +7,14 @@
         <h1>{{element.title}}</h1>
     {% if element.image %}
     <div class="col-md-6">
-      <p class='home-text'>{{element.text}}</p>
+      <p class='home-text'>{{element.text|safe}}</p>
     </div>
     <div class="col-md-6">
       <img class="img-responsive img-rounded" src="{{ element.image.url }}" alt=" {{ element.title }}"><p class="card-text">{{ element.image_text }}</p>
       </div>'
     {% else %}
     <div class="col-md-12">
-      <p class='home-text'>{{element.text}}</p>
+      <p class='home-text'>{{element.text|safe}}</p>
     </div>
     {% endif %}
     </div>
@@ -51,14 +51,14 @@
     {% if element.image %}
 
     <div class="col-md-6">
-      <p class='home-text'>{{element.text}}</p>
+      <p class='home-text'>{{element.text|safe}}</p>
     </div>
     <div class="col-md-6 ">
       <img class="img-responsive img-rounded" src="{{ element.image.url }}" alt=" {{ element.title }}"><p class="card-text">{{ element.image_text }}</p>
     </div>
     {% else %}
     <div class="col-md-12">
-      <p class='home-text'>{{element.text}}</p>
+      <p class='home-text'>{{element.text|safe}}</p>
     </div>
     {% endif %}
     </div>

@@ -21,7 +21,8 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('siteapp.urls',namespace='site'))
+    url(r'^', include('siteapp.urls',namespace='site')),
+    url(r'^tinymce/', include('tinymce.urls')),
 ]
 
 

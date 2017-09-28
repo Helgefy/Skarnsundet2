@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from tinymce.models import HTMLField
 
 # Create your models here.
 def upload_locationB(instance, filename):
@@ -41,3 +42,8 @@ class Under_vann(models.Model):
 	image = models.ImageField(upload_to=upload_locationB, null=True, blank=True,width_field='width_field', height_field='height_field')
 	height_field = models.IntegerField(default=0)
 	width_field = models.IntegerField(default=0)
+
+
+class Htmlsite(models.Model):
+	name = models.CharField(max_length=30)
+	html = HTMLField()
