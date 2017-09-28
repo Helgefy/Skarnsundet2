@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 from tinymce.widgets import TinyMCE
-from django.form import *
+from django.forms import *
 
 # Register your models here.
 from .models import Bilde, Main_site, Under_vann, Htmlsite
