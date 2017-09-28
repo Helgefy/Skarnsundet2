@@ -3,7 +3,7 @@
 {% block content%}
   <div class="kropp">
   {% for element in over %}
-  <div class='row'>
+  <div class='innlegg row'>
         <h1>{{element.title}}</h1>
     {% if element.image %}
     <div class="col-md-6">
@@ -19,7 +19,7 @@
     {% endif %}
     </div>
   {% endfor %}
-    <div class="bokser">
+    <div class="bokser row">
     <div class="col-md-6 link-kort"  href="#">
       <a href="album"><div class="caption post-content forskning">
       <h1>Forskning</h1>
@@ -46,7 +46,7 @@
     </div>
     </div><!--/bokser--> 
     {% for element in under %}
-    <div class='row'>
+    <div class='innlegg row'>
       <h1>{{element.title}}</h1>
     {% if element.image %}
 
