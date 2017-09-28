@@ -8,5 +8,5 @@ from .views import(
 
 urlpatterns = [
     url(r'^$', forside,name='main'),
-    url(r'^album/$', album),
+    url(r'^album/$', album,name='album'),
 ]
