@@ -28,7 +28,7 @@ class UnderAdmin(admin.ModelAdmin):
 	class Meta:
 		model = Under_vann
 
-class HtmlForm(forms.Form):
+class HtmlForm(ModelForm):
 	html = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 10}))
 	class Meta:
 		model = Htmlsite
