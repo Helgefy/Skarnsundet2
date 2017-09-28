@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db.models import Count
 from django.shortcuts import render
-from .models import Bilde, Main_site
+from .models import Bilde, Main_site, Under_vann
 
 # Create your views here.
 
@@ -35,9 +35,10 @@ def forside(request):
 	return render(request,'home.html',context)
 
 def undervann(request):
-
+	element = Under_vann.objects.all()
 	context={
 		'element': element,
 		'title': 'Under vann'
 	}
+	return render(request, 'blogside.html', context)
 
