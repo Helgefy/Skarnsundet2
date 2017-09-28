@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 from tinymce.models import HTMLField
 
+
 # Create your models here.
 def upload_locationB(instance, filename):
 	return '%s/%s' %(instance.album, filename)
