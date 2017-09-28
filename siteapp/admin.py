@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 from tinymce.widgets import TinyMCE
+from django.form import *
 
 # Register your models here.
 from .models import Bilde, Main_site, Under_vann, Htmlsite
@@ -27,12 +28,13 @@ class UnderAdmin(admin.ModelAdmin):
 	class Meta:
 		model = Under_vann
 
-class HtmlAdmin(admin.ModelAdmin):
-	formfield_overrides = {
-		Htmlsite.html: {'widget': TinyMCE(attrs={'cols': 80, 'rows': 20}, )},
-	}
+class HtmlForm(forms.ModelForm):
+	html = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 10}))
 	class Meta:
 		model = Htmlsite
+
+class HtmlAdmin(admin.ModelAdmin):
+	form = HtmlForm
 
 
 admin.site.register(Bilde, BildeAdmin)
