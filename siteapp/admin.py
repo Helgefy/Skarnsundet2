@@ -27,8 +27,9 @@ class UnderAdmin(admin.ModelAdmin):
 		model = Under_vann
 
 class HtmlAdmin(admin.ModelAdmin):
-	list_display= ['name']
-	list_display_links = ['name']
+    formfield_overrides = {
+        models.TextField: {'widget': TinyMCE(attrs={'cols': 80, 'rows': 20}, )},
+    }
 	class Meta:
 		model = Htmlsite
 
