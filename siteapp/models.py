@@ -47,4 +47,4 @@ class Under_vann(models.Model):
 
 class Htmlsite(models.Model):
 	name = models.CharField(max_length=30)
-	html = models.TextField()
+	html = models.CharField(max_length=1000)
