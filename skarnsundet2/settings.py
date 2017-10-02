@@ -176,7 +176,7 @@ CKEDITOR_CONFIGS = {
         [ 'Maximize', 'ShowBlocks' ] ,
         [ 'About' ] 
         ],
-        'height': 300,
-        'width': 300,
+        'height': 1200,
+        'width': 800,
     },
 }
