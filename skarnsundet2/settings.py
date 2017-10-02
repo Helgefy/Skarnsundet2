@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'siteapp',
     'ckeditor',
+    'ckeditor-uploader',
 ]
 
 MIDDLEWARE = [
@@ -153,3 +154,12 @@ MEDIA_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'default': { # Default gjoer at settingen virker for allle tilfelder der setting ikke er satt
+        'toolbar': 'full',
+        'height': 300,
+        'width': 300,
+    },
+}
