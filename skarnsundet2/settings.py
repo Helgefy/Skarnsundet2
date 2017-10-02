@@ -169,7 +169,7 @@ CKEDITOR_CONFIGS = {
         [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ] ,
         [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ] ,
         [ 'Link', 'Unlink', 'Anchor' ] ,
-        [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ] ,
+        [ 'Image2', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ] ,
         '/',
         [ 'Styles', 'Format', 'Font', 'FontSize' ] ,
         [ 'TextColor', 'BGColor' ] ,
