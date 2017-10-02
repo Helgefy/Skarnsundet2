@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'siteapp',
     'ckeditor',
-    'ckeditor-uploader',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -155,6 +155,7 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
+AWS_QUERYSTRING_AUTH = False
 
 CKEDITOR_CONFIGS = {
     'default': { # Default gjoer at settingen virker for allle tilfelder der setting ikke er satt
