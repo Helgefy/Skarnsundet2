@@ -159,7 +159,7 @@ AWS_QUERYSTRING_AUTH = False
 
 CKEDITOR_CONFIGS = {
     'default': { # Default gjoer at settingen virker for allle tilfelder der setting ikke er satt
-        'toolbar':         'toolbar': 'Custom',
+        'toolbar': 'Custom',
         'toolbar_Custom': [
         { name: 'document', items: [ 'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates' ] },
         { name: 'clipboard', items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
