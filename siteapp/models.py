@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from ckeditor.fields import RichTextField
+from ckeditor.fields import RichTextField, RichTextUploadingField
 
 
 # Create your models here.
@@ -47,4 +47,4 @@ class Under_vann(models.Model):
 
 class Htmlsite(models.Model):
 	name = models.CharField(max_length=30)
-	html = RichTextField(max_length=1000)
+	html = RichTextUploadingField(max_length=1000)
