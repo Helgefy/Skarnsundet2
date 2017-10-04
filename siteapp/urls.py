@@ -12,5 +12,5 @@ urlpatterns = [
     url(r'^$', forside,name='main'),
     url(r'^album/$', album,name='album'),
     url(r'^under_vann/$',undervann, name='undervann'),
-    url(r'^?P<slug>[\w-]+/$',htmlView, name='')
+    url(r'^?(P<slug>[\w-]+)/$',htmlView, name='')
 ]
