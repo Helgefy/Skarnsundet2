@@ -43,7 +43,7 @@ def undervann(request):
 	return render(request, 'blogside.html', context)
 
 def htmlView(request):
-	element = get_object_or_404(Htmlsite,slug=slug)
+	element = get_object_or_404(Htmlsite,name=slug)
 	context = {
 		'title': element.name,
 		'html': element.html
