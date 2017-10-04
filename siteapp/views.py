@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.db.models import Count
-from django.shortcuts import render
-from .models import Bilde, Main_site, Under_vann
+from django.shortcuts import render, get_object_or_404
+from .models import Bilde, Main_site, Under_vann, Htmlsite
 
 # Create your views here.
 
@@ -36,9 +36,17 @@ def forside(request):
 
 def undervann(request):
 	element = Under_vann.objects.all()
-	context={
+	context = {
 		'element': element,
 		'title': 'Under vann'
 	}
 	return render(request, 'blogside.html', context)
 
+def htmlView(request):
+	element = get_object_or_404(Htmlsite,slug=slug)
+	context = {
+		'title': element.name,
+		'html': element.html
+	}
+
+	return render(request, 'htmlsite.html', context)
