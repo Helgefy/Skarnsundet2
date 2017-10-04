@@ -5,7 +5,7 @@ from django.contrib import admin
 
 from django import forms
 # Register your models here.
-from .models import Bilde, Main_site, Under_vann, Htmlsite
+from .models import Bilde, Main_site, Htmlsite
 
 class BildeAdmin(admin.ModelAdmin):
 	list_display = ['name','album']
@@ -21,12 +21,6 @@ class MainAdmin(admin.ModelAdmin):
 	list_filter = ['position']
 	class Meta:
 		model = Main_site
-class UnderAdmin(admin.ModelAdmin):
-	list_display= ['title']
-	list_display_links = ['title']
-	class Meta:
-		model = Under_vann
-
 
 
 class HtmlAdmin(admin.ModelAdmin):
@@ -39,5 +33,4 @@ class HtmlAdmin(admin.ModelAdmin):
 
 admin.site.register(Bilde, BildeAdmin)
 admin.site.register(Main_site, MainAdmin)
-admin.site.register(Under_vann, UnderAdmin)
 admin.site.register(Htmlsite,HtmlAdmin)
