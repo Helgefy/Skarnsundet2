@@ -47,7 +47,7 @@ class Under_vann(models.Model):
 
 class Htmlsite(models.Model):
 	name = models.CharField(max_length=30)
-	html = RichTextUploadingField(max_length=1000)
+	html = RichTextUploadingField(max_length=10000)
 
 	def __unicode__(self):
 		return self.name
